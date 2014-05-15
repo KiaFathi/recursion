@@ -30,7 +30,7 @@ var stringifyJSON = function(obj) {
   		}
   		res = "[" + str + "]";
   	}else{
-  		res = "" + obj + "";
+  		res = obj.toString();
   	}
   }
   return res;
