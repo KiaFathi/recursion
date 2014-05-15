@@ -5,13 +5,10 @@
 
 
 var stringifyJSON = function(obj) {
-  // your code goes here
   var res;
   if(obj === null){
   	res = "null";
-  }else if(typeof obj === 'number'){
-  	res = obj.toString();
-  }else if(typeof obj === 'boolean'){
+  }else if(typeof obj === 'number' || typeof obj === 'boolean'){
   	res = obj.toString();
   }else if(typeof obj === 'undefined'){
   	res = '';
