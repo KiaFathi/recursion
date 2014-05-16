@@ -12,20 +12,24 @@ var getElementsByClassName = function(className){
   			res.push(arg);
   		}
   	}
-    console.log('res after first if = ' + res);
+    console.log('res after first if = ');
+    console.log(res);
   	if(arg.hasChildNodes()){
   		var children = arg.childNodes;
-		for(var i; i < children.length; i++){
-  			if(typeof children[i] != 'undefined'){
-  				scanner(children[i]);
+      alert('gets here')
+		for(var node in children){
+  			if(typeof node != 'undefined'){
+  				scanner(node);
   			}
   		}
   	}
   }
   scanner(document.body);
 
-  console.log("res at completion is: " + res );
-  console.log("res should equal: " + document.getElementsByClassName('targetClassName'));
+  console.log("res at completion is: ");
+  console.log(res);
+  console.log("res should equal: ");
+  console.log(document.getElementsByClassName('targetClassName'));
   return res;
 };
  
