@@ -7,14 +7,12 @@
 var getElementsByClassName = function(className){
   var res = [];
   var scanner = function(arg){
-  	var cur = arg;
-  	if(cur.classList != undefined && cur.classList.length > 0){
-  		for(var i = 0; i < arg.classList.length; i++){
-  			if(arg.classList[i] === className){
-  				res.push(arg);
-  			}
+  	if(arg.classList != undefined && arg.classList.length > 0){
+  		if(arg.classList.contains(className)){
+  			res.push(arg);
   		}
   	}
+    console.log('res after first if = ' + res);
   	if(arg.hasChildNodes()){
   		var children = arg.childNodes;
 		for(var i; i < children.length; i++){
@@ -30,3 +28,4 @@ var getElementsByClassName = function(className){
   console.log("res should equal: " + document.getElementsByClassName('targetClassName'));
   return res;
 };
+ 
