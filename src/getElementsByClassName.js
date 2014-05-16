@@ -14,7 +14,6 @@ var getElementsByClassName = function(className){
   	}
   	if(arg.hasChildNodes()){
   		var children = arg.childNodes;
-      alert('gets here')
 		for(var node in children){
   			if(typeof children[node] == 'object'){
   				scanner(children[node]);
