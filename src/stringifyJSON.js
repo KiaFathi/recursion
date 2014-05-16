@@ -16,7 +16,7 @@ var stringifyJSON = function(obj) {
   }else if(typeof obj === 'string'){
   	res = '"' + obj + '"';
   }else if(typeof obj === 'object'){
-  	if(obj.length >= 0){
+  	if(Array.isArray(obj)){
   		var str = ""
   		for(var i = 0; i < obj.length; i++){
   			var cur = obj[i];
